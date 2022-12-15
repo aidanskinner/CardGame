@@ -2,7 +2,6 @@ import java.util.ArrayList;
 public class Deck {
     private ArrayList<Card> cards;
     private int cardsLeft;
-    private String[] suits = {}
 
     public Deck(String[] ranks, String[] suits, int[] points) {
         this.cards = new ArrayList<Card>();
@@ -12,23 +11,24 @@ public class Deck {
                 cards.add(c);
             }
         }
-        this.cardsLeft = 52;
+        this.cardsLeft = ranks.length * suits.length;
     }
 
     public boolean isEmpty() {
-        return cards.isEmpty();
+        return cardsLeft == 0;
     }
 
     public int getCardsLeft() {
         return cardsLeft;
     }
 
-    public Card deal (ArrayList<Card> cards) {
+    public Card deal () {
         if(isEmpty() == true) {
-            shuffle();
+            return null;
         }
         cardsLeft--;
-        return cards.get(cardsLeft);
+        //Gets card from the top of deck
+        return cards.remove(0);
     }
     public void shuffle() {
         for (int i = 0; i < cards.size(); i++) {

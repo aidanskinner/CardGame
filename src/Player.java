@@ -31,13 +31,22 @@ public class Player {
         this.points += points;
     }
 
+    // Used to get the points the dealer and player recieves
+    public int totalPoints() {
+        int total = 0;
+        for (int i = 0; i < hand.size(); i++) {
+            total += hand.get(i).getPoint();
+        }
+        return total;
+    }
+
     public void addCard(Card name)
     {
         hand.add(name);
     }
 
     public String toString(){
-        return name +" has " + points +"points\n" + name + "’s cards: " + hand;
+        return name +" has " + totalPoints() +" points\n" + name + "’s cards: " + hand;
     }
 }
 
