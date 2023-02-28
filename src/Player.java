@@ -1,4 +1,7 @@
+// Aidan Skinner
 import java.util.ArrayList;
+import javax.swing.*;
+import java.awt.*;
 public class Player {
     private ArrayList<Card> hand = new ArrayList<Card>();
     private int points;
@@ -31,7 +34,7 @@ public class Player {
         this.points += points;
     }
 
-    // Used to get the points the dealer and player recieves
+    // Used to get the points the dealer and player receives
     public int totalPoints() {
         int total = 0;
         for (int i = 0; i < hand.size(); i++) {
@@ -43,6 +46,7 @@ public class Player {
     public void addCard(Card name)
     {
         hand.add(name);
+
     }
 
     public String toString(){

@@ -1,12 +1,17 @@
+// Aidan Skinner
+import javax.swing.*;
+import java.awt.*;
 public class Card {
     private String suit;
     private String rank;
     private int point;
+    private Image x;
 
-    public Card(String suit, String rank, int point) {
+    public Card(String suit, String rank, int point, Image x) {
         this.suit = suit;
         this.rank = rank;
         this.point = point;
+        this.x = x;
     }
 
     public String getSuit() {
@@ -35,5 +40,10 @@ public class Card {
 
     public String toString() {
         return rank + " of " + suit;
+    }
+
+    // Returns the image of the card
+    public Image getImage() {
+        return this.x;
     }
 }

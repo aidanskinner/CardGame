@@ -1,13 +1,22 @@
+// Aidan Skinner
 import java.util.ArrayList;
+import javax.swing.*;
+import java.awt.*;
+
 public class Deck {
     private ArrayList<Card> cards;
     private int cardsLeft;
 
-    public Deck(String[] ranks, String[] suits, int[] points) {
+    private GameViewer x;
+
+    // Uses the gameviewer to get the card images array
+    public Deck(String[] ranks, String[] suits, int[] points, GameViewer x) {
+        this.x = x;
         this.cards = new ArrayList<Card>();
-        for (int i = 0; i < suits.length; i++) {
-            for (int j  = 0; j < ranks.length; j++) {
-                Card c  = new Card(ranks[j], suits[i], points[j]);
+        for (int i = 0; i < ranks.length; i++) {
+            for (int j = 0; j < suits.length; j++) {
+                // Creates a new card and adds to the deck with its card image
+                Card c  = new Card(ranks[i], suits[j], points[i], x.cardImages[i][j]);
                 cards.add(c);
             }
         }
