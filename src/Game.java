@@ -90,6 +90,7 @@ public class Game {
         // tie scenario
         else if (dealer.totalPoints() == p1.totalPoints()) {
             System.out.println("Game was a tie!");
+            gameTie = true;
         }
 
         else if (dealer.totalPoints() < p1.totalPoints()) {
