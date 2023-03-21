@@ -1,0 +1,7 @@
+This game is BlackJack. The goal of the game is to get as close to 21 with cards, but
+without going over 21, busting. You will be competing against the dealer. Good Luck! All you have to do if run the game
+and either hit or stay.
+
+
+Sometimes you have to input your "Hit" or "Stay" twice for the system to register. I already had some bugs in the
+back side I tried fixing, but I was unable to fix some.
